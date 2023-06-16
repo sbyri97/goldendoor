@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/goldendoor/static/css/main.b5e8e7bf.css",
-    "main.js": "/goldendoor/static/js/main.cf7fa506.js",
+    "main.js": "/goldendoor/static/js/main.5ff41b41.js",
     "static/media/services.jpg": "/goldendoor/static/media/services.7750875b30e861927688.jpg",
     "static/media/logo_white.png": "/goldendoor/static/media/logo_white.ecc14fc6d7cb299dc0f5.png",
     "static/media/hero-banner-edit.jpg": "/goldendoor/static/media/hero-banner-edit.b782dde748742dea97fb.jpg",
@@ -35,10 +35,10 @@
     "static/media/kaivalyaikiikocom-0wy9r-webfont.woff": "/goldendoor/static/media/kaivalyaikiikocom-0wy9r-webfont.aaebb3f50a52591d8a23.woff",
     "index.html": "/goldendoor/index.html",
     "main.b5e8e7bf.css.map": "/goldendoor/static/css/main.b5e8e7bf.css.map",
-    "main.cf7fa506.js.map": "/goldendoor/static/js/main.cf7fa506.js.map"
+    "main.5ff41b41.js.map": "/goldendoor/static/js/main.5ff41b41.js.map"
   },
   "entrypoints": [
     "static/css/main.b5e8e7bf.css",
-    "static/js/main.cf7fa506.js"
+    "static/js/main.5ff41b41.js"
   ]
 }
