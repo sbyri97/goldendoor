@@ -1,0 +1,49 @@
+nav {
+	width: 100%;
+	position: sticky;
+	z-index: 10;
+	top: 0;
+	padding: 2em 0;
+	color: white;
+	/* background-color: transparent; */
+	/* background-color: hsla(0, 0%, 5%); */
+	max-height: 6em;
+	font: 'Oswald', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav span {
+	font-size: 18px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.2s ease;
+	transition-delay: 0.25s;
+	margin: 1em;
+	padding-bottom: 0.3em;
+	font-weight: 400;
+}
+
+nav span:hover {
+	cursor: pointer;
+	border-bottom: 1px solid white;
+}
+
+nav span:hover i {
+	color: gold;
+}
+
+nav span.activeClass i {
+	color: gold;
+}
+
+nav span.activeClass {
+	border-bottom-color: var(--lightAccent);
+}
+
+@media screen and (max-width: 500px) {
+
+	nav span {
+		font-size: 80%
+	}
+}
