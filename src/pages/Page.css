@@ -313,10 +313,6 @@ section div {
 	#serviceContainer .box-container {
 		grid-template-columns: repeat(2, minmax(200px, 1fr));
 	}
-
-	.home-background-img{
-
-	}
 }
 
 @media screen and (max-width: 1024px) {
