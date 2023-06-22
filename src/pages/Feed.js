@@ -46,12 +46,12 @@ const Feed = (props) => {
     }
 
     return (
-        <div className="image-grid">
-            {post}
-        </div>
-        // <React.Fragment>
-        //     {post}
-        // </React.Fragment>
+      <div className="image-grid">
+        {post}
+      </div>
+      // <React.Fragment>
+      //     {post}
+      // </React.Fragment>
     );
 }
 
