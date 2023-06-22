@@ -43,7 +43,7 @@ const Pics = ({...props}) => {
         
 
         async function fetchProfile () {
-            const fields = ['id', 'media_type', 'media_url']
+            const fields = ["id", "media_type", "media_url", "permalink", "thumbnail_url"];
             const API = `/.netlify/functions/todo`;
 
             try {
@@ -60,7 +60,7 @@ const Pics = ({...props}) => {
                     .then((resp) => {
                         // console.log(resp);
                         setFeeds(resp.data)
-                        // console.log(feeds);
+                        console.log(feeds);
                     })
                 })
 

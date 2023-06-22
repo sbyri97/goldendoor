@@ -1,7 +1,7 @@
 import React from "react";
 
 const Feed = (props) => {
-    const {id, media_type, media_url} = props.feed
+    const { id, media_type, media_url} = props.feed;
 
     let post;
 
@@ -14,6 +14,7 @@ const Feed = (props) => {
                     src={media_url}
                     type="video/mp4"
                     playsInline
+                    defaultMuted
                     onMouseOver={event => event.target.play()}
                     onMouseOut={event => event.target.pause()}
                     className="insta-img">
