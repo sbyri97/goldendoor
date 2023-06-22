@@ -38,7 +38,7 @@ const Feed = (props) => {
                     id={id}
                     src={media_url}
                     className="image-grid-col-2 image-grid-row-2"
-                    // alt={caption}
+                    alt="{caption}"
                 />
             );
     }

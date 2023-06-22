@@ -23,6 +23,24 @@ const Home = () => {
 		.addEventListener('change', e => setMatches(e.matches))
 	  }, []);
 
+	//   	useEffect(() => {
+    //     async function fetchTodo() {
+    //       const API = '/.netlify/functions/todo';
+    //       console.log(API);
+    //       const todo = await fetch(API).then((res) => console.log(res));
+    //       console.log(todo);
+    //       try {
+    //         // const test = await fetch(API)
+    //         const todo = await fetch(API).then((res) => res.json());
+    //         // console.log('test', test);
+    //         console.log(todo);
+    //       } catch (err) {
+    //         console.log(err);
+    //       }
+    //     }
+    //     fetchTodo();
+    //   }, []);
+
 	// const imageURL = image
 	// style={{ background: `url(${require(imageURL)}) no-repeat`}}
 	return (

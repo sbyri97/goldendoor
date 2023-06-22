@@ -3,14 +3,17 @@ import { Home, Services, Contact} from './';
 import Pics from './Photos';
 import About from './About';
 
-const Main = () => (
+const Main = () => {
+
+	return (
 	<main>
 		<Home />
 		<Services />
-		<Pics token={process.env.REACT_APP_INS_TOKEN} limit={12}/>
+		<Pics limit={12}/>
 		<Contact />
 		<About />
 	</main>
-);
+	)
+};
 
 export default Main;

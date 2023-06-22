@@ -1,28 +1,60 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState, useEffect} from "react";
 import { useNav } from '../customHooks/useNav';
 import Feed from './Feed'
 
 import './Insta.css'
 
 
-const Pics = ({token, ...props}) => {
+const Pics = ({...props}) => {
 
     const photosRef = useNav('Gallery');
 
     const [feeds, setFeeds] = useState([])
+	  // const [instaIns, setInstaIns] = useState("");
 
-    const tokenPrep = useRef(token);
-    tokenPrep.current = token;
-    const tokenn = token
+    
+    // useEffect(() => {
+    //   async function fetchTodo() {
+    //     const API = `/.netlify/functions/todo`;
+    //     try {
+    //       const todo = await fetch(API).then((res) => res.json()).then((res) => {
+    //         const title = res.title
+    //       });
+    //       // console.log(todo);
+    //       // const ins = todo.title
+    //       // setInstaIns(ins);
 
+    //     } catch (err) {
+    //       console.log(err);
+    //     } 
+    //   }
+    //   fetchTodo();
+    // });
+
+    // console.log(instaIns);
+    // const token = instaIns
+
+    // const tokenPrep = useRef(token);
+    // tokenPrep.current = token;
+    // const tokenn = token
+    
     useEffect(() => {
         const abortController = new AbortController();
+        
 
         async function fetchProfile () {
             const fields = ['id', 'media_type', 'media_url']
+            const API = `/.netlify/functions/todo`;
 
             try {
-                fetch(`https://graph.instagram.com/v16.0/me/media?fields=${fields}&limit=${props.limit}&access_token=${tokenn}`)
+                await fetch(API)
+                  .then((res) => res.json())
+                  .then((res) => {
+                    const title = res.title;
+                    return fetch(
+                      `https://graph.instagram.com/v16.0/me/media?fields=${fields}&limit=${props.limit}&access_token=${title}`
+                    );
+                  })
                 .then((resp) => {
                     resp.json()
                     .then((resp) => {

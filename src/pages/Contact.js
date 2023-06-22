@@ -1,27 +1,56 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { useNav } from '../customHooks/useNav';
 import './Page.css';
 import contactImg from '../assets/images/services.jpg'
 import {VscLocation} from "react-icons/vsc"
 import {IoCallOutline} from "react-icons/io5"
-import {GoogleMap, Marker, useJsApiLoader, useLoadScript} from '@react-google-maps/api'
+import {GoogleMap, Marker, useLoadScript} from '@react-google-maps/api'
 import { useMemo } from "react";
-// import { Map, GoogleApiWrapper } from 'google-maps-react';
+
 
 const Contact = () => {
 	// useNav takes in a navLinkId and returns a ref
 	// this ref is used to register the navLinkId that's
 	// currently in view, and apply activeClass styling
 	// to the corresponding nav childElement
-	
-	const contactRef = useNav('Contact');
-	// console.log(process.env.REACT_APP_GOOGLE_API_KEY);
-	const { isLoaded } = useJsApiLoader ({
-		googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,
-	});
 
-	console.log(isLoaded);
-	const center1 = { lat: 37.786483, lng: -122.415858 };
+	const contactRef = useNav('Contact');
+	// const apiKey = fetchUsers()
+	// const { data, status } = useQuery("gmaps", fetchUsers);
+	// console.log(apiKey.then((res) => res.json()));
+	// const [mapTitle, setMapTitle] = useState("")
+	// const [showMap, setShowMap] = useState(false)
+
+	// useEffect(() => {
+	//   async function fetchgm() {
+	// 	const API = `/.netlify/functions/gmaps`;
+	// 	try {
+	// 	  const todo = await fetch(API).then((res) => res.json());
+	// 	  const ins = todo.title
+	// 	  setMapTitle(ins);
+
+	// 	} catch (err) {
+	// 	  console.log(err);
+	// 	} 
+	//   }
+	//   fetchgm();
+	// }, []);
+
+	// useEffect(() => {
+	// 	const timer = setTimeout(() => {
+	// 		setShowMap(true)
+	// 	}, 500)
+
+	// 	return () => {
+	// 		clearTimeout(timer);
+	// 	};
+	// }, [])
+
+	const { isLoaded } = useLoadScript({
+    googleMapsApiKey: process.env.REACT_APP_GMAK,
+  });
+
+	// console.log(isLoaded);
 	const center = useMemo(() => ({ lat: 37.786483, lng: -122.415858}), []);
 
 	const map_styles = [
@@ -189,38 +218,38 @@ const Contact = () => {
 	return (
     <section ref={contactRef} id="contactContainer">
       <div
-        class="contact100-more flex-col-c-m"
+        className="contact100-more flex-col-c-m"
         style={{
           backgroundImage: `url(${contactImg})`,
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div class="flex-w size1 p-b-47">
-          <div class="txt1 p-r-25">
-            <span class="lnr lnr-map-marker">
+        <div className="flex-w size1 p-b-47">
+          <div className="txt1 p-r-25">
+            <span className="lnr lnr-map-marker">
               <VscLocation style={{ color: "#fff", fontSize: "24px" }} />
             </span>
           </div>
-          <div class="flex-col size2">
-            <span class="txt1 p-b-20">Address</span>
+          <div className="flex-col size2">
+            <span className="txt1 p-b-20">Address</span>
             <a
               href="https://goo.gl/maps/kSCfoW1TpQjY5ArF6"
               target="_blank"
-              class="txt2"
+              className="txt2"
             >
               764 Geary St, San Francisco, CA 94109
             </a>
           </div>
         </div>
-        <div class="dis-flex size1 p-b-47">
-          <div class="txt1 p-r-25">
-            <span class="lnr lnr-phone-handset">
+        <div className="dis-flex size1 p-b-47">
+          <div className="txt1 p-r-25">
+            <span className="lnr lnr-phone-handset">
               <IoCallOutline style={{ color: "#fff", fontSize: "24px" }} />
             </span>
           </div>
-          <div class="flex-col size2">
-            <span class="txt1 p-b-20">Call Us</span>
-            <a href="tel:+14158749626" class="txt3">
+          <div className="flex-col size2">
+            <span className="txt1 p-b-20">Call Us</span>
+            <a href="tel:+14158749626" className="txt3">
               415-874-9626
             </a>
           </div>
@@ -228,7 +257,7 @@ const Contact = () => {
       </div>
       <div className="gmaps">
         {!isLoaded ? (
-          <h1>Loading Maps...</h1>
+          <h1>Loading...</h1>
         ) : (
           <GoogleMap
             mapContainerStyle={{
@@ -252,7 +281,7 @@ const Contact = () => {
           >
             <Marker position={{ lat: 37.786483, lng: -122.415858 }} />
           </GoogleMap>
-        )}
+		)}
       </div>
     </section>
   );

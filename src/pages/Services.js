@@ -24,48 +24,44 @@ const Services = () => {
 	const serviceRef = useNav('Services');
 
 	return (
-    <div
-      ref={serviceRef}
-      id="serviceContainer"
-    >
+    <div ref={serviceRef} id="serviceContainer">
       <h1 className="heading">BARBER SERVICES</h1>
       <div className="box-container">
         <div className="box">
-          	<img src={haircut}/>
-          	<h3>Haircut</h3>
-          	<h4>$45</h4>
+          <img src={haircut} alt="" />
+          <h3>Haircut</h3>
+          <h4>$45</h4>
         </div>
 
         <div className="box">
-          	<img src={hairAndBeard} />
-          	<h3>Haircut & Beard</h3>
-          	<h4>$65</h4>
+          <img src={hairAndBeard} alt="" />
+          <h3>Haircut & Beard</h3>
+          <h4>$65</h4>
         </div>
 
         <div className="box">
-          	<img src={buzzcut} />
-          	<h3>Buzzcut</h3>
-          	<h4>$35</h4>
+          <img src={buzzcut} alt="" />
+          <h3>Buzzcut</h3>
+          <h4>$35</h4>
         </div>
 
         <div className="box">
-          	<img src={beard} />
-          	<h3>Beard</h3>
-          	<h4>$30</h4>
+          <img src={beard} alt="" />
+          <h3>Beard</h3>
+          <h4>$30</h4>
         </div>
 
         <div className="box">
-          	<img src={shave} />
-          	<h3>Shave</h3>
-          	<h4>$30</h4>
+          <img src={shave} alt="" />
+          <h3>Shave</h3>
+          <h4>$30</h4>
         </div>
 
         <div className="box">
-          	<img src={shampoo} />
-          	<h3>Shampoo</h3>
-          	<h4>$15</h4>
+          <img src={shampoo} alt="" />
+          <h3>Shampoo</h3>
+          <h4>$15</h4>
         </div>
-
       </div>
     </div>
     // <section ref={serviceRef} id='serviceContainer' style={{backgroundImage:`url(${servicesBackgroundImg})`, backgroundRepeat: "no-repeat"}}>
