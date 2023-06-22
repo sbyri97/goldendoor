@@ -41,9 +41,44 @@ nav span.activeClass {
 	border-bottom-color: var(--lightAccent);
 }
 
+@media screen and (max-width: 600px) {
+
+	nav span {
+		font-size: 90%
+	}
+}
+
 @media screen and (max-width: 500px) {
 
 	nav span {
 		font-size: 80%
+	}
+}
+
+@media screen and (max-width: 417px) {
+
+	nav span {
+		font-size: 70%
+	}
+}
+
+@media screen and (max-width: 364px) {
+
+	nav span {
+		font-size: 65%
+	}
+}
+
+@media screen and (max-width: 338px) {
+
+	nav span {
+		font-size: 60%
+	}
+}
+
+@media screen and (max-width: 311px) {
+
+	nav span {
+		font-size: 50%
 	}
 }
