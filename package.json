@@ -25,8 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prod": "npm run build; npm run build:lambda",
-    "build:lambda":" netlify-lambda build functions"
+    "prod": "npm run build && npm run build:lambda",
+    "build:lambda":" netlify-lambda build .netlify/functions"
   },
   "eslintConfig": {
     "extends": [
