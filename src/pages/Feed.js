@@ -13,6 +13,7 @@ const Feed = (props) => {
                     height='auto'
                     src={media_url}
                     type="video/mp4"
+                    playsInline
                     onMouseOver={event => event.target.play()}
                     onMouseOut={event => event.target.pause()}
                     className="insta-img">
