@@ -30,13 +30,13 @@ const Services = () => {
         <div className="box">
           <img src={haircut} alt="" />
           <h3>Haircut</h3>
-          <h4>$45</h4>
+          <h4>$50</h4>
         </div>
 
         <div className="box">
           <img src={hairAndBeard} alt="" />
           <h3>Haircut & Beard</h3>
-          <h4>$65</h4>
+          <h4>$70</h4>
         </div>
 
         <div className="box">
